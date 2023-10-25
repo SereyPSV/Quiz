@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ButtonsBar } from '../../components';
 
 const historyResult = [
 	{
@@ -27,13 +28,9 @@ const bgColor = (res) => {
 };
 
 const MainPageContainer = ({ className }) => {
-	console.log(historyResult[1].result.filter((i) => i === 2));
 	return (
 		<div className={className}>
-			<div className="buttons">
-				<div className="button">Запустить тест</div>
-				<div className="button">Редактировать тест</div>
-			</div>
+			<ButtonsBar />
 
 			<div className="testing-history">
 				<h3>История прохождений</h3>
@@ -77,35 +74,6 @@ export const MainPage = styled(MainPageContainer)`
 	flex-direction: column;
 	width: 100%;
 	margin: auto;
-
-	.buttons {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		padding: 40px 0px;
-	}
-
-	.button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 48%;
-		height: 70px;
-		background-color: #fff;
-		font-size: 20px;
-		border-radius: 10px;
-
-		transition-timing-function: linear;
-		transition-duration: 0.2s;
-
-		&:hover {
-			cursor: pointer;
-			background-color: #3a3a3a;
-			color: #dedede;
-			transition-timing-function: linear;
-			transition-duration: 0.2s;
-		}
-	}
 
 	.testing-history {
 		font-size: 24px;

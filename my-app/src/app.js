@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import { MainPage } from './pages';
+import { MainPage, TakingTheTest } from './pages';
 import styled from 'styled-components';
 
 const AppColumn = styled.div`
 	display: flex;
 	max-width: 1240px;
-	margin: 0 auto;
+	margin: 50px auto;
 	background-color: red;
 `;
 
@@ -21,8 +21,8 @@ export const App = () => {
 		<AppColumn>
 			<Page>
 				<Routes>
-					<Route path="/" element={<MainPage />} />
-					<Route path="/post/" element={<div>Новая статья</div>} />
+					<Route path="/" element={<TakingTheTest />} />
+					<Route path="/1" element={<MainPage />} />
 					<Route path="/post/:postId" element={<div>Статья</div>} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
